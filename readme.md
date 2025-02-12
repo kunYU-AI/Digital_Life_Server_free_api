@@ -16,6 +16,8 @@ B站极客湾「数字生命」的服务器代码的免费API KEY版本，因为
    to `/TTS/models`
 6. 启动虚拟环境、服务器和客户端，即可开启旅途（见下面指引）。
 
+> 极客湾原有的Launcher和UE Client代码请查看[原Readme](https://github.com/zixiiu/Digital_Life_Server)
+ 
 ## 步骤4：搭建虚拟环境和各种依赖:
 > ⚠ 注意：  
 > 如果不知道你在干什么（纯小白），请在**需要存放该项目的位置**打开终端(Win11)或Powershell(win10)，然后**按照下述说明逐步操作**即可  
@@ -83,6 +85,17 @@ cd Digital_Life_Server_free_api
 ## 步骤6：启动
 > ⚠ 注意：  
 > 启动前，不要忘记根据实际情况修改bat文件中的具体配置
+
+在`Digital_Life_Server_free_api`文件夹下，打开终端(Win11)，先激活环境，然后运行服务器。
 ```bash
-run-gpt3.5-api.bat
+.\venv\Scripts\activate
+.\run-gpt3.5-free-api.bat
 ```
+
+点击Client文件夹中的`T.exe`即可启动客户端。
+
+将之前终端代码中运行到最后输出的：`INFO Server is listening on XXX.XXX.XX.XXX:YYYYY`分别填写在客户端服务器设置的第一栏：`IP地址XXX.XXX.XX.XXX`和第二栏：`端口号YYYYY`。
+
+按Z输入语音，开始对话。
+
+**结束对话**：客户端关闭即可，服务器需要打开任务管理器，搜索python，然后终止所有python进程。最后退出终端
